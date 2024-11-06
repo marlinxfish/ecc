@@ -5,7 +5,7 @@ import logo from "../assets/logo.png"; // Pastikan path ini benar
 
 const AboutUs = () => {
   return (
-    <section className="about-us">
+    <section id="about" className="about-us">
       <div className="content">
         <img src={logo} alt="El Computer Center Logo" className="logo" />
         <h1 className="title">Siapa Kita?</h1>

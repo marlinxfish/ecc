@@ -1,4 +1,3 @@
-// src/components/Programs.jsx
 import React, { useState } from "react";
 import { FaLanguage, FaFileWord, FaCode, FaPalette, FaTimes } from "react-icons/fa";
 import Slider from "react-slick";
@@ -109,7 +108,7 @@ const Programs = () => {
   };
 
   return (
-    <div className="programs">
+    <div id="program" className="programs">
       <h1>Temukan Program Terbaik di EL COMPUTER CENTER</h1>
       <p>Pilih program unggulan yang dirancang khusus untuk mengembangkan keterampilan Anda! Temukan kelas yang sesuai dengan kebutuhan dan minat Anda untuk memulai perjalanan belajar yang seru dan bermanfaat!</p>
 

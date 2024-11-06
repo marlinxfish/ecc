@@ -8,6 +8,7 @@ import Kegiatan2 from "../assets/Kegiatan2.jpg";
 import Kegiatan3 from "../assets/Kegiatan3.jpg";
 import Kegiatan4 from "../assets/Kegiatan4.jpg";
 import Parkir from "../assets/Parkir.jpg";
+import brosur from "../assets/brosur.pdf"; // Pastikan Anda memiliki file brosur
 
 const Home = () => {
   const sliderSettings = {
@@ -21,14 +22,18 @@ const Home = () => {
   };
 
   return (
-    <div className="home-container">
+    <div id="home" className="home-container">
       <div className="hero-section">
         <div className="content">
           <h1>Mau Belajar Komputer dan Bahasa Inggris dengan Mudah?</h1>
           <p>Bergabunglah bersama kami untuk meningkatkan keterampilan Anda dan membuka peluang baru.</p>
           <div className="buttons">
-            <button className="explore-button">Lihat Kursus</button>
-            <button className="get-started-button">Download Brosur</button>
+            <a className="explore-button" href="#program">
+              Lihat Kursus
+            </a>
+            <a className="get-started-button" href={brosur} target="_blank" rel="noopener noreferrer">
+              Download Brosur
+            </a>
           </div>
         </div>
       </div>

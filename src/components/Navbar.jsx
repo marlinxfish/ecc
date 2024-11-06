@@ -9,6 +9,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeNavbar = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
@@ -19,16 +23,24 @@ const Navbar = () => {
       </div>
       <ul className={`navbar-links ${isOpen ? "active" : ""}`}>
         <li>
-          <a href="#home">Beranda</a>
+          <a href="#home" onClick={closeNavbar}>
+            Beranda
+          </a>
         </li>
         <li>
-          <a href="#program">Program</a>
+          <a href="#program" onClick={closeNavbar}>
+            Program
+          </a>
         </li>
         <li>
-          <a href="#about">Tentang Kami</a>
+          <a href="#about" onClick={closeNavbar}>
+            Tentang Kami
+          </a>
         </li>
         <li>
-          <a href="#contact">Kontak</a>
+          <a href="#contact" onClick={closeNavbar}>
+            Kontak
+          </a>
         </li>
       </ul>
     </nav>
