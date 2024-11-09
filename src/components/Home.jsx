@@ -8,7 +8,7 @@ import Kegiatan2 from "../assets/Kegiatan2.jpg";
 import Kegiatan3 from "../assets/Kegiatan3.jpg";
 import Kegiatan4 from "../assets/Kegiatan4.jpg";
 import Parkir from "../assets/Parkir.jpg";
-import brosur from "../assets/brosur.pdf"; // Pastikan Anda memiliki file brosur
+import brosur from "../assets/brosur.pdf";
 
 const Home = () => {
   const sliderSettings = {

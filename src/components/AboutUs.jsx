@@ -1,7 +1,6 @@
-// src/components/AboutUs.jsx
 import React from "react";
 import "./AboutUs.css";
-import logo from "../assets/logo.png"; // Pastikan path ini benar
+import logo from "../assets/logo.png";
 
 const AboutUs = () => {
   return (

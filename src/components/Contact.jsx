@@ -4,6 +4,7 @@ import "./Contact.css";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
+    email: "",
     phone: "",
     message: "",
   });
@@ -19,11 +20,12 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const phoneNumber = "6285156924532"; // Ganti dengan nomor WhatsApp Anda
-    const message = `Nama: ${formData.name}%0ANomor: ${formData.phone}%0APesan: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    const subject = `Pesan dari ${formData.name}`;
+    const body = `Nama: ${formData.name}\nEmail: ${formData.email}\nNomor Telepon: ${formData.phone}\nPesan: ${formData.message}`;
 
-    window.open(whatsappUrl, "_blank");
+    const mailtoUrl = `mailto:info@elcomputercenter.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoUrl;
   };
 
   return (
@@ -37,7 +39,12 @@ const Contact = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="phone">Nomor WhatsApp</label>
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email Anda" value={formData.email} onChange={handleChange} required />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="phone">Nomor Telepon</label>
             <input type="tel" id="phone" name="phone" placeholder="Contoh: 08123456789" value={formData.phone} onChange={handleChange} required />
           </div>
 
@@ -47,7 +54,7 @@ const Contact = () => {
           </div>
 
           <button type="submit" className="submit-btn">
-            <i className="fab fa-whatsapp"></i> Kirim via WhatsApp
+            Kirim
           </button>
         </form>
       </section>
